@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+    
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+    
+
+<div class="example-wrapper">
+<h1>Remplir la fiche de frais de {{mois}} </h1>
+   <div class="card text-center">
+      <div class="card-header">
+       
+      </div>
+   <div class="card-body">
+      <h5 class="card-title">Nous sommes le {{ "now"|date("d/m/Y") }}</h5>
+      <a href="{{ path('creaFiche') }}" class="btn btn-primary">Créer la fiche</a>
+      <a href="{{ path('modFiche', {'id_Fiche': laFiche.0.idFiche }) }}" class="btn btn-primary">Modifier de nouveaux frais</a>
+   </div>
+   <div class="card-footer text-muted">
+
+   </div>
+</div>
+    <h1>Voici la liste de vos fiche de frais</h1>
+      <div class="row">
+      {% for fiche in lesFiches %}
+        <div class="col-md-12">
+          <div class="card mb-12" style="max-width: 540px;">
+            <div class="card-body">
+              <h4>Voici la fiche du {{fiche.mois|date('m/Y') }}</h4>
+              <div class="row">
+              <a href="#" class="btn btn-primary">Consulter les anciennes fiches</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" href="https://7e150783-a-62cb3a1a-s-sites.googlegroups.com/site/portfoliospielmann/formation/gsb---application-frais-comptables/gsb.png?attachauth=ANoY7cq7o2Y4QlFCl2wSjgpT_9qWGizRpqNRQ_HArXpporN6WuY6ZAkitZUP5NZCwnHjDTBD9XLZ8n55WuJ03FXkMc7_dn14SoVtNeekFM5KIVpgRoQWSCtdcf9cT2T7FHrA9J03l0VQJOWmZC9Uhv4CuTQrS2uE8MfnjRkkB4Y5jY2iKDz8SA_dSuKxylKUCAcIq9grTIbNd1EO_QrT9OT6xFvCrnA0qdsm6nFCO38GxJIC-854tUBDhXpQz0V0CGW3FZrC2foddMlQYWoqYnd8-uCSC1JqGA%3D%3D&attredirects=0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>    
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

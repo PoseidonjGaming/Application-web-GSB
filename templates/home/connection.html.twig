@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Connexion GSB</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="icon" href="https://7e150783-a-62cb3a1a-s-sites.googlegroups.com/site/portfoliospielmann/formation/gsb---application-frais-comptables/gsb.png?attachauth=ANoY7cq7o2Y4QlFCl2wSjgpT_9qWGizRpqNRQ_HArXpporN6WuY6ZAkitZUP5NZCwnHjDTBD9XLZ8n55WuJ03FXkMc7_dn14SoVtNeekFM5KIVpgRoQWSCtdcf9cT2T7FHrA9J03l0VQJOWmZC9Uhv4CuTQrS2uE8MfnjRkkB4Y5jY2iKDz8SA_dSuKxylKUCAcIq9grTIbNd1EO_QrT9OT6xFvCrnA0qdsm6nFCO38GxJIC-854tUBDhXpQz0V0CGW3FZrC2foddMlQYWoqYnd8-uCSC1JqGA%3D%3D&attredirects=0" />
+    </head>
+    
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+    
+
+<div class="example-wrapper">
+    <h1>Bienvenue sur l'utilitaire GSB</h1>
+    <div class="sidenav">
+         <div class="login-main-text">
+            <img src="{{asset ('https://baptiste-bisson.com/wp-content/uploads/2016/04/Logo-gsb.png')}}" alt="Gsb_logo">
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+                  <div class="form-group">
+                     <label>Identifiant</label>
+                     <input type="text" class="form-control" placeholder="Identifiant">
+                  </div>
+                  <div class="form-group">
+                     <label>Mot de passe</label>
+                     <input type="password" class="form-control" placeholder="Mot de Passe">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Se Connecter</button>
+                  <a href="{{ path('menu', {'id': 1}) }}" class="btn btn-primary">Se Connecter</a>
+               </form>
+            </div>
+         </div>
+      </div>
+{% endblock %}
